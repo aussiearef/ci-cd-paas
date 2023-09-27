@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www
+hooks:
+  BeforeInstall:
+    - location: create-web-dir.sh
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: start.sh
+      timeout: 300
+      runas: root
