@@ -5,10 +5,10 @@ files:
     destination: /var/www
 hooks:
   BeforeInstall:
-    - location: /var/www/create-web-dir.sh
+    - location: create-web-dir.sh
       timeout: 300
       runas: ubuntu #run as root 
   ApplicationStart:
-    - location: /var/www/start.sh
+    - location: start.sh
       timeout: 300
       runas: ubuntu #run as root 
