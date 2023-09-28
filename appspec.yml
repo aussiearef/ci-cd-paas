@@ -7,8 +7,8 @@ hooks:
   BeforeInstall:
     - location: /var/www/create-web-dir.sh
       timeout: 300
-      runas: root
+      runas: ubuntu #run as root 
   ApplicationStart:
     - location: /var/www/start.sh
       timeout: 300
-      runas: root
+      runas: ubuntu #run as root 
