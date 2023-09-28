@@ -1,0 +1,15 @@
+[Unit]
+Description=CI/CD Demo Service File
+After=network.target
+
+[Service]
+ExecStart=sudo dotnet ci-cd-demo.dll --urls "http://*:80" 
+WorkingDirectory=/var/www
+User=ubuntu
+Restart=on-failure
+RestartSec=5
+StartLimitInterval=0
+Environment=ASPNETCORE_ENVIRONMENT=Production
+
+[Install]
+WantedBy=multi-user.target

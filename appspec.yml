@@ -8,7 +8,7 @@ hooks:
     - location: create-web-dir.sh
       timeout: 300
       runas: ubuntu #run as root 
-  ApplicationStart:
-    - location: start.sh
+  AfterInstall:
+    - location: install-service.sh
       timeout: 300
       runas: ubuntu #run as root 
