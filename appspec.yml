@@ -5,10 +5,10 @@ files:
     destination: /var/www
 hooks:
   BeforeInstall:
-    - location: create-web-dir.sh
+    - location: /var/www/create-web-dir.sh
       timeout: 300
       runas: root
-  AfterInstall:
-    - location: start.sh
+  ApplicationStart:
+    - location: /var/www/start.sh
       timeout: 300
       runas: root
